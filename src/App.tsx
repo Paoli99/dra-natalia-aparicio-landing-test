@@ -1,10 +1,12 @@
-import AppNavbar from "@/components/layout/Navbar";
+import { NavbarDemo } from "@/components/layout/Navbar";
+import HeroSection from "@/components/sections/HeroSection";
 
 function App() {
   return (
-    <>
-      <AppNavbar />
-    </>
+    <main className="min-h-screen bg-white">
+      <NavbarDemo />
+      <HeroSection />
+    </main>
   );
 }
 
