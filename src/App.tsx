@@ -4,6 +4,7 @@ import Footer from "./components/layout/Footer";
 import SpecialtiesSection from "./components/sections/SpecialtiesSection";
 import FollowUsSection from "./components/sections/FollowUsSection";
 import ContactSection from "./components/sections/ContactSection";
+import CtaSection from "./components/sections/CtaSection";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <SpecialtiesSection />
       <FollowUsSection />
       <ContactSection />
+      <CtaSection />
       <Footer />
     </main>
   );
