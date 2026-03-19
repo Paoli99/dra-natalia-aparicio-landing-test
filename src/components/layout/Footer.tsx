@@ -48,7 +48,8 @@ export default function Footer() {
 
         <div className="flex flex-col gap-3 md:items-end">
           <p className="text-sm text-zinc-500">
-            © 2024 Dra. Natalia Andrade Requena. Todos los derechos reservados.
+            © {new Date().getFullYear()} Dra. Natalia Andrade Requena. Todos los
+            derechos reservados.
           </p>
           <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#c1a05f]">
             Cochabamba · Bolivia
