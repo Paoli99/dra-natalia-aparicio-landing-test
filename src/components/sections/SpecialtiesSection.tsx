@@ -60,7 +60,7 @@ export default function SpecialtiesSection() {
             <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.5em] text-[#c1a05f]">
               Tratamientos
             </p>
-            <h2 className="text-5xl font-extrabold uppercase tracking-tight leading-none text-[#c1a05f] md:text-7xl">
+            <h2 className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight leading-none text-[#c1a05f] md:text-7xl">
               Especialidades
             </h2>
             <p className="mt-4 max-w-xl text-lg font-light text-zinc-500">

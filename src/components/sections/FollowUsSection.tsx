@@ -8,7 +8,7 @@ const posts = Array.from({ length: 6 }, (_, i) => ({ id: i + 1 }));
 
 export default function InstagramSection() {
   return (
-    <section className="bg-white py-32">
+    <section className="bg-white py-8 md:py-32">
       <div className="mx-auto w-full max-w-[1920px] px-12">
         <motion.div
           className="mb-16 text-center"
