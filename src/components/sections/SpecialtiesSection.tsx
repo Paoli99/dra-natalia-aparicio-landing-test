@@ -1,32 +1,29 @@
-import { useEffect, useRef, useState, useId } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useState } from "react";
+import { motion } from "motion/react";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
 const specialties = [
   {
     number: "01",
     title: "Faciales",
     image:
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80",
+      "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     longDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    offset: false,
   },
   {
     number: "02",
     title: "Corporales",
     image:
-      "https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=600&q=80",
+      "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
     longDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    offset: true,
   },
   {
     number: "03",
@@ -37,6 +34,7 @@ const specialties = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam quis nostrud.",
     longDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    offset: false,
   },
   {
     number: "04",
@@ -47,98 +45,64 @@ const specialties = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit.",
     longDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    offset: true,
   },
 ];
 
 export default function SpecialtiesSection() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<HTMLDivElement[]>([]);
   const [active, setActive] = useState<(typeof specialties)[0] | null>(null);
-  const id = useId();
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.set(cardsRef.current, { opacity: 0, y: 80, scale: 0.95 });
-      gsap.to(cardsRef.current, {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.8,
-        ease: "power3.out",
-        stagger: 0.15,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-        },
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
-  useEffect(() => {
-    if (active) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [active]);
 
   return (
-    <section id="especialidades" ref={sectionRef} className="bg-zinc-50 py-32">
-      <div className="mx-auto w-full md:max-w-[1920px] px-12">
+    <section id="especialidades" className="bg-zinc-50 py-32">
+      <div className="mx-auto w-full max-w-[1920px] px-12">
         <div className="mb-20 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.5em] text-[#c1a05f]">
               Tratamientos
             </p>
-            <h2 className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight leading-none text-zinc-900 md:text-7xl">
-              <span className="text-[#c1a05f]">Especialidades</span>
+            <h2 className="text-5xl font-extrabold uppercase tracking-tight leading-none text-[#c1a05f] md:text-7xl">
+              Especialidades
             </h2>
             <p className="mt-4 max-w-xl text-lg font-light text-zinc-500">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore.
             </p>
           </div>
-          <span className="text-[11px] font-bold uppercase tracking-widest text-zinc-900 border-b-2 border-[#c1a05f] pb-1 self-end">
+          <span className="self-end border-b-2 border-[#c1a05f] pb-1 text-[11px] font-bold uppercase tracking-widest text-zinc-900">
             Explorar Servicios
           </span>
         </div>
 
-        <div className="flex flex-col gap-6 sm:flex-row sm:flex-wrap">
+        <div className="hidden md:flex gap-4 items-start">
           {specialties.map((item, index) => (
             <motion.div
               key={item.title}
-              layoutId={`card-${item.title}-${id}`}
               onClick={() => setActive(item)}
-              ref={(el) => {
-                if (el) cardsRef.current[index] = el;
-              }}
-              className="group cursor-pointer overflow-hidden rounded-none"
-              style={{
-                flexBasis: "calc(25% - 1.5rem)",
-                minWidth: "200px",
-                flexGrow: 1,
+              className={`group relative flex-1 cursor-pointer overflow-hidden ${item.offset ? "mt-16" : "mt-0"}`}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{
+                duration: 0.7,
+                ease: [0.22, 1, 0.36, 1],
+                delay: index * 0.12,
               }}
             >
               <div className="relative aspect-[3/5] overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="h-full w-full object-cover transition-all duration-700 group-hover:scale-110 md:grayscale group-hover:grayscale-0"
+                  className="h-full w-full object-cover md:grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 transition-opacity group-hover:opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-90" />
                 <div className="absolute bottom-8 left-8 right-8">
-                  <p className="mb-1 text-[10px] uppercase tracking-widest text-white/70">
+                  <p className="mb-1 text-[10px] uppercase tracking-widest text-white/60">
                     {item.number}
                   </p>
-                  <h3 className="text-3xl font-extrabold uppercase tracking-tight text-white">
+                  <h3 className="text-2xl font-extrabold uppercase tracking-tight text-white">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-sm font-light leading-relaxed text-white/0 transition-all duration-500 group-hover:text-white/80">
+                  <p className="mt-2 text-sm font-light leading-relaxed text-transparent transition-all duration-500 group-hover:text-white/80">
                     {item.description}
                   </p>
                 </div>
@@ -146,22 +110,53 @@ export default function SpecialtiesSection() {
             </motion.div>
           ))}
         </div>
+
+        <div className="flex flex-col gap-4 md:hidden">
+          {specialties.map((item, index) => (
+            <motion.div
+              key={item.title}
+              onClick={() => setActive(item)}
+              className="group relative cursor-pointer overflow-hidden"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                ease: [0.22, 1, 0.36, 1],
+                delay: index * 0.08,
+              }}
+            >
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="h-full w-full object-cover transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <p className="mb-1 text-[10px] uppercase tracking-widest text-white/60">
+                    {item.number}
+                  </p>
+                  <h3 className="text-2xl font-extrabold uppercase tracking-tight text-white">
+                    {item.title}
+                  </h3>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
 
-      <AnimatePresence>
-        {active && (
-          <motion.div
-            className="fixed inset-0 z-50 grid place-items-center bg-black/50 p-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setActive(null)}
-          >
-            <motion.div
-              layoutId={`card-${active.title}-${id}`}
-              className="w-full max-w-xl overflow-hidden rounded-2xl border border-zinc-100 bg-white shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-            >
+      <Dialog
+        open={!!active}
+        onOpenChange={(open) => {
+          if (!open) setActive(null);
+        }}
+      >
+        <DialogContent className="overflow-hidden rounded-2xl border border-zinc-100 p-0 shadow-2xl max-w-xl">
+          <DialogTitle className="sr-only">{active?.title}</DialogTitle>
+          {active && (
+            <>
               <div className="relative h-56 overflow-hidden">
                 <img
                   src={active.image}
@@ -177,29 +172,22 @@ export default function SpecialtiesSection() {
                     {active.title}
                   </h3>
                 </div>
-                <Button
-                  onClick={() => setActive(null)}
-                  className="absolute right-4 top-4 h-8 w-8 rounded-full border-none bg-white/20 p-0 text-white shadow-none backdrop-blur-sm hover:bg-white/40"
-                >
-                  <X className="h-4 w-4" />
-                </Button>
               </div>
-
               <div className="p-8">
                 <p className="text-base font-light leading-relaxed text-zinc-600">
                   {active.longDescription}
                 </p>
-                <Button
+                <button
                   className="mt-8 rounded-full bg-[#c1a05f] px-8 py-3 text-[11px] font-bold uppercase tracking-widest text-white shadow-lg transition-all duration-200 hover:scale-95 hover:opacity-90"
                   onClick={() => setActive(null)}
                 >
                   Agendar Consulta
-                </Button>
+                </button>
               </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }
