@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { motion } from "motion/react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { motion } from "motion/react";
+import { useState } from "react";
 
 const specialties = [
   {
@@ -53,7 +53,7 @@ export default function SpecialtiesSection() {
   const [active, setActive] = useState<(typeof specialties)[0] | null>(null);
 
   return (
-    <section id="especialidades" className="bg-zinc-50 py-32">
+    <section id="especialidades" className="py-32">
       <div className="mx-auto w-full max-w-[1920px] px-12">
         <div className="mb-20 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>

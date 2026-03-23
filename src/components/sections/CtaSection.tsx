@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 export default function CtaSection() {
   return (
-    <section className="relative overflow-hidden bg-zinc-950 py-40 text-center text-white">
+    <section id="contact" className="relative overflow-hidden bg-zinc-950 py-40 text-center text-white">
       <div className="relative z-10 mx-auto w-full max-w-[1920px] px-12">
         <motion.h2
           className="mb-8 text-5xl font-extrabold uppercase tracking-tight leading-none md:text-8xl"

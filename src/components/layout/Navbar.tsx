@@ -11,9 +11,9 @@ import {
 import { useState } from "react";
 
 const navItems = [
-  { name: "Especialidades", link: "#especialidades" },
-  { name: "Filosofía", link: "#filosofia" },
-  { name: "Contacto", link: "#contacto" },
+  { name: "Dirección", link: "#address" },
+  { name: "Contacto", link: "#contact" },
+  { name: "Sobre mi ", link: "#aboutme" },
 ];
 
 const Logo = () => (

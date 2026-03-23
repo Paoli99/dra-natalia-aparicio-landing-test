@@ -1,11 +1,11 @@
-import { motion } from "motion/react";
+import doctorPlaceholder from "@/assets/images/doctorPlaceholder.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import doctorPlaceholder from "@/assets/images/doctorPlaceholder.jpg";
+import { motion } from "motion/react";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center bg-white pt-24 pb-16">
+    <section id="aboutme" className="relative flex min-h-screen items-center bg-white pt-24 pb-16">
       <div className="relative z-10 mx-auto w-full max-w-[1920px] px-12 flex flex-col md:flex-row items-center gap-12">
         <div className="flex flex-1 flex-col gap-6">
           <motion.p
@@ -54,7 +54,7 @@ export default function HeroSection() {
               Agendar Cita
             </Button>
 
-            <button className="group flex items-center gap-3 border-none bg-transparent p-0 cursor-pointer">
+{/*             <button className="group flex items-center gap-3 border-none bg-transparent p-0 cursor-pointer">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#c1a05f] text-[#c1a05f] transition-all duration-300 group-hover:bg-[#c1a05f] group-hover:text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +68,7 @@ export default function HeroSection() {
               <span className="text-[11px] font-bold uppercase tracking-widest text-zinc-700">
                 Ver Filosofía
               </span>
-            </button>
+            </button> */}
           </motion.div>
         </div>
 

@@ -1,9 +1,9 @@
+import { MapPin } from "lucide-react";
 import { motion } from "motion/react";
-import { MapPin, Smartphone, Mail } from "lucide-react";
 
 export default function ContactSection() {
   return (
-    <section id="contacto" className="bg-white py-8 md:py-32">
+    <section id="address" className="bg-white py-8 md:py-32">
       <div className="mx-auto w-full max-w-[1920px] px-12">
         <div className="flex flex-col gap-16 md:flex-row md:items-start md:gap-20">
           <motion.div
@@ -17,10 +17,10 @@ export default function ContactSection() {
               <h2 className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight leading-none text-zinc-900">
                 <span className="text-[#c1a05f]">Consultorio</span>
                 <br />
-                <span className="text-[#c1a05f]">&amp; </span>
+                {/* <span className="text-[#c1a05f]">&amp; </span>
                 <span className=" font-normal normal-case text-[#c1a05f]">
                   contacto
-                </span>
+                </span> */}
               </h2>
             </div>
 
@@ -33,7 +33,7 @@ export default function ContactSection() {
                   Cochabamba, Bolivia
                 </p>
               </div>
-              <div className="flex items-center gap-4">
+              {/* <div className="flex items-center gap-4">
                 <Smartphone className="h-5 w-5 shrink-0 text-[#c1a05f]" />
                 <p className="text-md md:text-xl font-light text-zinc-700">
                   +591 700 00000
@@ -44,7 +44,7 @@ export default function ContactSection() {
                 <p className="text-md md:text-xl font-light text-zinc-700">
                   contacto@dranataliaandrade.com
                 </p>
-              </div>
+              </div> */}
             </div>
 
             <div className="grid grid-cols-2 gap-8 border-t border-zinc-100 pt-10">
