@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-[1920px] flex-col gap-12 md:flex-row md:items-start md:justify-between">
         <div className="flex flex-col gap-6">
           <img
-            src="/nataliadr2-removebg-preview.png"
+            src="/horizontal_logo.png"
             alt="Dra. Natalia Andrade Requena"
             className="h-16 w-auto object-contain object-left"
           />

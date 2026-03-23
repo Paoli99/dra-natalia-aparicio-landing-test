@@ -1,14 +1,14 @@
-import { useState } from "react";
 import {
-  Navbar,
-  NavBody,
-  NavItems,
-  NavbarButton,
   MobileNav,
   MobileNavHeader,
   MobileNavMenu,
   MobileNavToggle,
+  Navbar,
+  NavbarButton,
+  NavBody,
+  NavItems,
 } from "@/components/ui/resizable-navbar";
+import { useState } from "react";
 
 const navItems = [
   { name: "Especialidades", link: "#especialidades" },
@@ -17,16 +17,15 @@ const navItems = [
 ];
 
 const Logo = () => (
-  <a
+ <a
     href="#"
-    className="relative z-20 mr-4 flex flex-col leading-none no-underline"
+    className="relative z-20 mr-4 flex items-center no-underline"
   >
-    <span className="text-[0.6rem] font-bold uppercase tracking-[0.4em] text-[#c1a05f]">
-      Dra.
-    </span>
-    <span className="text-[1.05rem] font-extrabold uppercase tracking-tight text-zinc-900 leading-tight">
-      Natalia Andrade Requena
-    </span>
+    <img
+      src="/horizontal_logo.png"
+      alt="Dra. Natalia Andrade Requena"
+      className="h-20 w-auto object-contain"
+    />
   </a>
 );
 
