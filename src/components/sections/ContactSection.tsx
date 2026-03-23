@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 export default function ContactSection() {
   return (
-    <section id="address" className="bg-white py-8 md:py-32">
+    <section id="address" className=" py-10 md:py-2">
       <div className="mx-auto w-full max-w-[1920px] px-12">
         <div className="flex flex-col gap-16 md:flex-row md:items-start md:gap-20">
           <motion.div

@@ -53,7 +53,7 @@ export default function SpecialtiesSection() {
   const [active, setActive] = useState<(typeof specialties)[0] | null>(null);
 
   return (
-    <section id="especialidades" className="py-32">
+    <section id="especialidades" className="py-10 md:mb-20">
       <div className="mx-auto w-full max-w-[1920px] px-12">
         <div className="mb-20 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>

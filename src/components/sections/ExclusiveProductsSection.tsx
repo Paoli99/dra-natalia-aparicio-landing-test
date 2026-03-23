@@ -23,7 +23,7 @@ const products = [
 
 export default function ExclusiveProductsSection() {
   return (
-    <section className="py-32">
+    <section className="py-10 md:py-2">
       <div className="mx-auto max-w-[1920px] px-12">
         <div className="mb-20">
           <h2 className="text-5xl md:text-7xl font-headline uppercase tracking-tighter text-[#c1a05f] mb-4">

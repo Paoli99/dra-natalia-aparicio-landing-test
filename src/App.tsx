@@ -4,6 +4,7 @@ import Footer from "./components/layout/Footer";
 import ContactSection from "./components/sections/ContactSection";
 import CtaSection from "./components/sections/CtaSection";
 import ExclusiveProductsSection from "./components/sections/ExclusiveProductsSection";
+import FAQSection from "./components/sections/FAQSection";
 import FollowUsSection from "./components/sections/FollowUsSection";
 import OurSpaceSection from "./components/sections/OurSpaceSection";
 import SpecialtiesSection from "./components/sections/SpecialtiesSection";
@@ -18,6 +19,7 @@ function App() {
       <ExclusiveProductsSection />
       <FollowUsSection />
       <ContactSection />
+      <FAQSection />
       <CtaSection />
       <Footer />
     </main>

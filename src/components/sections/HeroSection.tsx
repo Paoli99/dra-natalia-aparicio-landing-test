@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export default function HeroSection() {
   return (
-    <section id="aboutme" className="relative flex min-h-screen items-center bg-white pt-24 pb-16">
+    <section id="aboutme" className="relative flex min-h-screen items-center ">
       <div className="relative z-10 mx-auto w-full max-w-[1920px] px-12 flex flex-col md:flex-row items-center gap-12">
         <div className="flex flex-1 flex-col gap-6">
           <motion.p

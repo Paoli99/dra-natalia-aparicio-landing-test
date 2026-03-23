@@ -21,7 +21,7 @@ const images = [
 
 export default function OurSpaceSection() {
   return (
-    <section className="py-32">
+    <section className="mb-32">
       <div className="mx-auto max-w-[1920px] px-12">
         <div className="text-center mb-20">
           <p className="text-[11px] font-bold uppercase tracking-[0.4em] text-[#c1a05f] mb-4">
@@ -32,7 +32,7 @@ export default function OurSpaceSection() {
             NUESTRO ESPACIO
           </h2>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
           {images.map((img, i) => (
             <motion.div
