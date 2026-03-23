@@ -1,6 +1,7 @@
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { motion } from "motion/react";
 import { useState } from "react";
+import { Button } from "../ui/button";
 
 const specialties = [
   {
@@ -177,12 +178,19 @@ export default function SpecialtiesSection() {
                 <p className="text-base font-light leading-relaxed text-zinc-600">
                   {active.longDescription}
                 </p>
-                <button
+                <Button
+                  asChild
                   className="mt-8 rounded-full bg-[#c1a05f] px-8 py-3 text-[11px] font-bold uppercase tracking-widest text-white shadow-lg transition-all duration-200 hover:scale-95 hover:opacity-90"
-                  onClick={() => setActive(null)}
                 >
-                  Agendar Consulta
-                </button>
+                  <a
+                    href="https://agenda.saluta360.com/6565114f-1b71-4e1c-9833-b51b042d30bb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setActive(null)}
+                  >
+                    Agendar Consulta
+                  </a>
+                </Button>
               </div>
             </>
           )}

@@ -43,7 +43,7 @@ export function NavbarDemo() {
           />
           <div className="flex items-center">
             <NavbarButton
-              href="#contacto"
+              href="https://agenda.saluta360.com/6565114f-1b71-4e1c-9833-b51b042d30bb"
               variant="primary"
               className="rounded-full bg-[#c1a05f] px-7 py-3 text-[11px] font-bold uppercase tracking-widest text-white shadow-lg hover:opacity-90 hover:translate-y-0"
             >
@@ -77,6 +77,7 @@ export function NavbarDemo() {
             ))}
             <div className="flex w-full flex-col pt-2">
               <NavbarButton
+              href="https://agenda.saluta360.com/6565114f-1b71-4e1c-9833-b51b042d30bb"
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full rounded-full bg-[#c1a05f] py-3 text-center text-[11px] font-bold uppercase tracking-widest text-white"

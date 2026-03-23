@@ -29,7 +29,7 @@ export default function CtaSection() {
         </motion.p>
 
         <motion.a
-          href="#contacto"
+          href="https://agenda.saluta360.com/6565114f-1b71-4e1c-9833-b51b042d30bb"
           className="inline-block rounded-full border border-[#c1a05f] px-12 py-5 text-xs font-bold uppercase tracking-widest text-[#c1a05f] no-underline transition-all duration-300 hover:bg-[#c1a05f] hover:text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

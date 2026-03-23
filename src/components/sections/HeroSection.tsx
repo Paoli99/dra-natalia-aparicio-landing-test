@@ -48,7 +48,8 @@ export default function HeroSection() {
             className="flex flex-wrap items-center gap-5"
           >
             <Button
-              render={<a href="#contacto" />}
+              render={<a 
+               href="https://agenda.saluta360.com/6565114f-1b71-4e1c-9833-b51b042d30bb" />}
               className="h-auto rounded-full border-none bg-[#c1a05f] px-8 py-4 text-[11px] font-bold uppercase tracking-widest text-white shadow-xl transition-all duration-200 hover:scale-95 hover:opacity-90"
             >
               Agendar Cita
