@@ -1,95 +1,109 @@
-import doctorPlaceholder from "@/assets/images/doctorPlaceholder.jpg";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { motion } from "motion/react";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { useRef } from "react";
+import SplitText from "../ui/SplitText";
 
 export default function HeroSection() {
+
+const ctaRef = useRef(null);
+
+useGSAP(() => {
+  gsap.to(ctaRef.current, {
+    y: 6,
+    repeat: -1,
+    yoyo: true,
+    ease: "power1.inOut",
+    duration: 1,
+  });
+}, []);
+
   return (
-    <section id="aboutme" className="relative flex min-h-screen items-center ">
-      <div className="relative z-10 mx-auto w-full max-w-[1920px] px-12 flex flex-col md:flex-row items-center gap-12">
-        <div className="flex flex-1 flex-col gap-6">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-[11px] font-bold uppercase tracking-[0.5em] text-[#c1a05f]"
-          >
-            Medicina Estética &amp; Antiage
-          </motion.p>
+    <section className="relative min-h-[70vh] flex flex-col justify-center bg-zinc-950 text-white overflow-hidden py-32">
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-[clamp(2.5rem,6vw,5rem)] font-extrabold uppercase tracking-tight leading-[0.9] text-zinc-900"
-          >
-            EL ARTE DE LA <br />
-            <span className="font-serif italic font-normal normal-case text-[#c1a05f]">
-              Dra. Natalia
-            </span>{" "}
-            <br />
-            Andrade Requena
-          </motion.h1>
+      <div className="absolute inset-0 z-0 opacity-20 grayscale">
+        <img
+          src="https://images.unsplash.com/photo-1588776814546-ec7e6f5a7b9b"
+          className="w-full h-full object-cover"
+        />
+      </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.35 }}
-            className="max-w-lg text-base font-light leading-relaxed text-zinc-500"
-          >
-            Redescubra su esencia a través de la armonización facial y el
-            rejuvenecimiento natural con precisión médica.
-          </motion.p>
+      <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/90 via-zinc-950/80 to-zinc-950 z-[1]" />
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.45 }}
-            className="flex flex-wrap items-center gap-5"
-          >
-            <Button
-              render={<a 
-               href="https://agenda.saluta360.com/6565114f-1b71-4e1c-9833-b51b042d30bb" />}
-              className="h-auto rounded-full border-none bg-[#c1a05f] px-8 py-4 text-[11px] font-bold uppercase tracking-widest text-white shadow-xl transition-all duration-200 hover:scale-95 hover:opacity-90"
-            >
-              Agendar Cita
-            </Button>
+      <div
+        className="absolute inset-0 opacity-10 z-[2]"
+        style={{
+          backgroundImage:
+            "radial-gradient(#c1a05f 0.5px, transparent 0.5px)",
+          backgroundSize: "30px 30px",
+        }}
+      />
 
-{/*             <button className="group flex items-center gap-3 border-none bg-transparent p-0 cursor-pointer">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#c1a05f] text-[#c1a05f] transition-all duration-300 group-hover:bg-[#c1a05f] group-hover:text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="h-4 w-4"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </span>
-              <span className="text-[11px] font-bold uppercase tracking-widest text-zinc-700">
-                Ver Filosofía
-              </span>
-            </button> */}
-          </motion.div>
+      <div className="container mx-auto px-6 md:px-12 max-w-5xl relative z-10 text-center">
+
+        <div className="mb-12">
+          <p className="text-[10px] font-bold uppercase tracking-[0.6em] text-[#c1a05f] mb-4">
+            Excelencia Clínica & Arte Estético
+          </p>
+          <div className="w-16 h-[1px] bg-[#c1a05f] mx-auto" />
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="relative shrink-0"
-        >
-          <Card className="w-[280px] md:w-[420px] aspect-[3/4] overflow-hidden rounded-none border-none shadow-2xl">
-            <CardContent className="h-full p-0">
-              <img
-                src={doctorPlaceholder}
-                alt="Dra. Natalia Andrade Requena"
-                className="h-full w-full object-cover grayscale transition-all duration-1000 hover:grayscale-0"
-              />
-            </CardContent>
-          </Card>
-          <div className="absolute -bottom-8 -left-8 h-36 w-36 border-[16px] border-[#f5f0e6] -z-10" />
-        </motion.div>
+        <h1 className="font-serif text-4xl md:text-6xl leading-[1.1] uppercase tracking-[-0.02em] mb-12 flex flex-wrap justify-center gap-x-2">
+
+          <SplitText text="La" tag="span" />
+
+          <SplitText
+            text="medicina estética"
+            tag="span"
+            className="text-[#c1a05f] uppercase"
+          />
+
+          <SplitText
+            text="es una rama de la medicina"
+            tag="span"
+          />
+
+        </h1>
+
+        <div className="space-y-8 max-w-3xl mx-auto">
+
+         <SplitText
+          text="La medicina estética es una rama de la medicina orientada a mejorar la calidad de la piel, tratar diferentes preocupaciones estéticas y mantener la armonía natural del rostro y del cuerpo."
+          className="text-lg md:text-xl text-zinc-300 font-light leading-relaxed max-w-3xl mx-auto"
+          splitType="words"
+          delay={20}
+          duration={1}
+        />
+
+        <SplitText
+          text="A través de tratamientos mínimamente invasivos y una valoración médica personalizada, es posible lograr resultados seguros, naturales y adaptados a cada paciente."
+          className="text-lg md:text-xl text-zinc-300 font-light leading-relaxed max-w-3xl mx-auto"
+          splitType="words"
+          delay={20}
+          duration={1}
+        />
+
+        </div>
+
+        <div className="mt-16 flex justify-center items-center gap-6">
+
+          <div className="h-px w-12 bg-white" />
+
+          <a
+            ref={ctaRef}
+            href="#especialidades"
+            className="flex items-center gap-3 text-white hover:text-[#c1a05f] transition-colors duration-100"
+          >
+            <span className="text-[10px] font-bold uppercase tracking-[0.4em]">
+              Descubrir Tratamientos
+            </span>
+
+            <span className="text-[#c1a05f]">↓</span>
+          </a>
+
+          <div className="h-px w-12 bg-white" />
+
+        </div>
+
       </div>
     </section>
   );

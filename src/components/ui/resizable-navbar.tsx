@@ -2,10 +2,10 @@
 import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import {
-  motion,
   AnimatePresence,
-  useScroll,
+  motion,
   useMotionValueEvent,
+  useScroll,
 } from "motion/react";
 
 import React, { useRef, useState } from "react";
@@ -102,7 +102,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         minWidth: "800px",
       }}
       className={cn(
-        "fixed top-0 left-0 right-0 z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
+        "fixed top-0 left-0 right-0 z-[60] mx-auto hidden w-full max-w-[90rem] flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent bg-white/80",
         visible && "bg-white/80 dark:bg-neutral-950/80",
         className,
       )}
