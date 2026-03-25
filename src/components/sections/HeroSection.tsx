@@ -18,7 +18,7 @@ useGSAP(() => {
 }, []);
 
   return (
-    <section className="relative min-h-[70vh] flex flex-col justify-center bg-zinc-950 text-white overflow-hidden py-32">
+    <section className="relative min-h-screen flex flex-col justify-center bg-zinc-950 text-white overflow-hidden py-32">
 
       <div className="absolute inset-0 z-0 opacity-20 grayscale">
         <img

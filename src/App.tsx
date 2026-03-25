@@ -1,6 +1,7 @@
 import { NavbarDemo } from "@/components/layout/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
 import Footer from "./components/layout/Footer";
+import AboutSection from "./components/sections/AboutMeSection";
 import ContactSection from "./components/sections/ContactSection";
 import CtaSection from "./components/sections/CtaSection";
 import ExclusiveProductsSection from "./components/sections/ExclusiveProductsSection";
@@ -14,6 +15,7 @@ function App() {
     <main className="min-h-screen bg-white">
       <NavbarDemo />
       <HeroSection />
+      <AboutSection />
       <SpecialtiesSection />
       <OurSpaceSection />
       <ExclusiveProductsSection />
