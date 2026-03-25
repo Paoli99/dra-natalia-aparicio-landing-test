@@ -39,7 +39,7 @@ export default function FollowUsSection() {
 
           <h2 className="text-4xl font-extrabold uppercase tracking-tight text-zinc-900 md:text-5xl">
             Síguenos en{" "}
-            <span className="font-serif italic normal-case text-[#c1a05f]">
+            <span className="font-serif uppercase text-[#c1a05f]">
               redes sociales
             </span>
           </h2>

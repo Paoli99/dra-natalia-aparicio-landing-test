@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react";
+import { Mail, MapPin, Smartphone } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function ContactSection() {
@@ -28,23 +28,23 @@ export default function ContactSection() {
               <div className="flex items-start gap-4">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#c1a05f]" />
                 <p className="text-md md:text-xl font-light text-zinc-700">
-                  Av. Heroínas esq. Pasteur,
+                 Av. Heroínas, Edif. Centro del Accidentado, 1er piso, esq. Pasteur
                   <br />
                   Cochabamba, Bolivia
                 </p>
               </div>
-              {/* <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4">
                 <Smartphone className="h-5 w-5 shrink-0 text-[#c1a05f]" />
                 <p className="text-md md:text-xl font-light text-zinc-700">
-                  +591 700 00000
+                  +591 79785444
                 </p>
               </div>
               <div className="flex items-center gap-4">
                 <Mail className="h-5 w-5 shrink-0 text-[#c1a05f]" />
                 <p className="text-md md:text-xl font-light text-zinc-700">
-                  contacto@dranataliaandrade.com
+                  dra.andradenatalia@gmail.com
                 </p>
-              </div> */}
+              </div>
             </div>
 
             <div className="grid grid-cols-2 gap-8 border-t border-zinc-100 pt-10">
@@ -53,10 +53,13 @@ export default function ContactSection() {
                   Horarios
                 </p>
                 <p className="text-sm font-medium text-zinc-700">
-                  Lun - Vie: 09:00 - 19:00
+                 Lunes a viernes
                 </p>
                 <p className="text-sm font-medium text-zinc-700">
-                  Sábados: 09:00 - 13:00
+                  09:00 – 13:00
+                </p>
+                <p className="text-sm font-medium text-zinc-700">
+                   15:00 – 19:00
                 </p>
               </div>
             </div>
