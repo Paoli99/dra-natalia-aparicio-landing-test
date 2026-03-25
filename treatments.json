@@ -1,0 +1,271 @@
+[
+  {
+    "id": "faciales",
+    "number": "01",
+    "title": "Faciales",
+    "image": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80",
+    "offset": false,
+    "items": [
+      {
+        "title": "Calidad de piel",
+        "description": "Tratamientos orientados a mejorar la textura, hidratación, luminosidad y apariencia general de la piel.",
+        "sections": [
+          {
+            "title": "Indicados para",
+            "items": [
+              "piel opaca o deshidratada",
+              "poros dilatados",
+              "textura irregular",
+              "cicatrices de acné",
+              "manchas y melasma"
+            ]
+          },
+          {
+            "title": "Tratamientos utilizados",
+            "items": [
+              "microneedling (Dermapen)",
+              "PRP facial",
+              "PDRN / PN",
+              "exosomas",
+              "peelings médicos",
+              "tratamientos despigmentantes"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Rejuvenecimiento facial",
+        "description": "Tratamientos enfocados en prevenir y tratar los signos del envejecimiento.",
+        "sections": [
+          {
+            "title": "Indicados para",
+            "items": [
+              "líneas de expresión",
+              "pérdida de firmeza",
+              "envejecimiento cutáneo",
+              "prevención del envejecimiento"
+            ]
+          },
+          {
+            "title": "Tratamientos utilizados",
+            "items": [
+              "toxina botulínica",
+              "bioestimuladores de colágeno",
+              "PRP",
+              "PDRN",
+              "exosomas"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Regeneración cutánea",
+        "description": "Tratamientos de medicina regenerativa que estimulan la reparación de la piel.",
+        "sections": [
+          {
+            "title": "Indicados para",
+            "items": [
+              "piel dañada",
+              "envejecimiento cutáneo",
+              "piel desvitalizada",
+              "recuperación de la piel"
+            ]
+          },
+          {
+            "title": "Tratamientos utilizados",
+            "items": [
+              "PDRN",
+              "exosomas",
+              "PRP",
+              "bioestimulación de colágeno"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Armonización y embellecimiento facial",
+        "description": "Tratamientos destinados a mejorar proporciones y contornos del rostro.",
+        "sections": [
+          {
+            "title": "Indicados para",
+            "items": [
+              "mejorar proporciones faciales",
+              "definir contornos del rostro",
+              "resaltar rasgos naturales"
+            ]
+          },
+          {
+            "title": "Tratamientos utilizados",
+            "items": ["ácido hialurónico"]
+          },
+          {
+            "title": "Procedimientos frecuentes",
+            "items": [
+              "aumento y definición de labios",
+              "rinomodelación",
+              "perfilado de mentón",
+              "definición mandibular"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "capilares",
+    "number": "02",
+    "title": "Capilares",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80",
+    "offset": true,
+    "items": [
+      {
+        "title": "Tratamientos capilares",
+        "description": "Diagnóstico y tratamiento de la caída del cabello, mejorando la salud del cuero cabelludo.",
+        "sections": [
+          {
+            "title": "Indicados para",
+            "items": [
+              "caída del cabello",
+              "debilitamiento capilar",
+              "disminución de densidad",
+              "alopecia androgenética",
+              "alopecia areata"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Diagnóstico capilar",
+        "description": "Evaluación mediante tricoscopio para analizar el folículo piloso.",
+        "sections": []
+      },
+      {
+        "title": "Tratamientos utilizados",
+        "description": "Terapias para estimular el crecimiento capilar.",
+        "sections": [
+          {
+            "title": "Tratamientos utilizados",
+            "items": [
+              "Mesoterapia capilar",
+              "PRP (plasma rico en plaquetas)",
+              "Exosomas",
+              "Terapia con láser de baja intensidad"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "corporales",
+    "number": "03",
+    "title": "Corporales",
+    "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80",
+    "offset": false,
+    "items": [
+      {
+        "title": "Tratamientos corporales",
+        "description": "Procedimientos orientados a mejorar la calidad de la piel y tratar alteraciones del tejido.",
+        "sections": []
+      },
+      {
+        "title": "Adiposidad localizada",
+        "description": "Reducción de grasa localizada y mejora del contorno corporal.",
+        "sections": [
+          {
+            "title": "Indicados para",
+            "items": [
+              "papada",
+              "abdomen",
+              "flancos",
+              "brazos",
+              "muslos"
+            ]
+          },
+          {
+            "title": "Tratamientos utilizados",
+            "items": [
+              "enzimas lipolíticas",
+              "hidrolipoclasia",
+              "mesoterapia lipolítica",
+              "infiltraciones lipolíticas"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Celulitis",
+        "description": "Mejora de la apariencia de la piel con celulitis.",
+        "sections": [
+          {
+            "title": "Indicados para",
+            "items": [
+              "celulitis",
+              "irregularidades en la piel",
+              "piel de naranja"
+            ]
+          },
+          {
+            "title": "Tratamientos utilizados",
+            "items": [
+              "mesoterapia corporal",
+              "carboxiterapia",
+              "enzimas lipolíticas"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Estrías",
+        "description": "Tratamientos para mejorar la apariencia de las estrías.",
+        "sections": [
+          {
+            "title": "Tratamientos utilizados",
+            "items": [
+              "carboxiterapia",
+              "mesoterapia regenerativa",
+              "terapias regenerativas"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Cicatrices",
+        "description": "Mejora de la apariencia de cicatrices.",
+        "sections": [
+          {
+            "title": "Tratamientos utilizados",
+            "items": [
+              "mesoterapia regenerativa",
+              "carboxiterapia",
+              "terapias regenerativas"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Post liposucción",
+        "description": "Recuperación del tejido tras procedimientos.",
+        "sections": [
+          {
+            "title": "Indicados para",
+            "items": [
+              "fibrosis",
+              "irregularidades",
+              "endurecimiento de la piel",
+              "recuperación del tejido"
+            ]
+          },
+          {
+            "title": "Tratamientos utilizados",
+            "items": [
+              "carboxiterapia",
+              "terapias regenerativas",
+              "tratamientos para fibrosis"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
