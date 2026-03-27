@@ -1,6 +1,6 @@
+import PLACEHOLDER from "@/assets/images/placeholder-5.png";
 import { motion } from "motion/react";
 
-const PLACEHOLDER = "https://placehold.co/800x600/1a1a1a/c1a05f";
 
 const images = [
   { src: PLACEHOLDER, span: "md:col-span-8" },
