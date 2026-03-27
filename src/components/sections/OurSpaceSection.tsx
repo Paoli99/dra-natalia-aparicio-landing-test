@@ -1,12 +1,13 @@
 import { motion } from "motion/react";
 
-const images = [
-  { src: "/placeholder-5.png", span: "md:col-span-8" },
-  { src: "/placeholder-5.png", span: "md:col-span-4" },
-  { src: "/placeholder-5.png", span: "md:col-span-4" },
-  { src: "/placeholder-5.png", span: "md:col-span-8" },
-];
+const PLACEHOLDER = "https://placehold.co/800x600/1a1a1a/c1a05f";
 
+const images = [
+  { src: PLACEHOLDER, span: "md:col-span-8" },
+  { src: PLACEHOLDER, span: "md:col-span-4" },
+  { src: PLACEHOLDER, span: "md:col-span-4" },
+  { src: PLACEHOLDER, span: "md:col-span-8" },
+];
 export default function OurSpaceSection() {
   return (
     <section className="mb-32">
@@ -31,7 +32,7 @@ export default function OurSpaceSection() {
               transition={{ duration: 0.7, delay: i * 0.1 }}
             >
               <img
-                src={images.src}
+                src={img.src}
                 alt="Espacio"
                 className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0"
               />
