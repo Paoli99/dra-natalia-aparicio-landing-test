@@ -1,23 +1,10 @@
-import placeholder from "@/assets/images/placeholder-5.png";
 import { motion } from "motion/react";
 
 const images = [
-  {
-    src: placeholder,
-    span: "md:col-span-8",
-  },
-  {
-   src: placeholder,
-    span: "md:col-span-4",
-  },
-  {
-    src: placeholder,
-    span: "md:col-span-4",
-  },
-  {
-    src: placeholder,
-    span: "md:col-span-8",
-  },
+  { src: "/placeholder-5.png", span: "md:col-span-8" },
+  { src: "/placeholder-5.png", span: "md:col-span-4" },
+  { src: "/placeholder-5.png", span: "md:col-span-4" },
+  { src: "/placeholder-5.png", span: "md:col-span-8" },
 ];
 
 export default function OurSpaceSection() {
@@ -28,7 +15,6 @@ export default function OurSpaceSection() {
           <p className="text-[11px] font-bold uppercase tracking-[0.4em] text-[#c1a05f] mb-4">
             Ambiente & Profesionalismo
           </p>
-
           <h2 className="text-5xl md:text-7xl font-headline uppercase tracking-tighter text-[#c1a05f]">
             NUESTRO ESPACIO
           </h2>
@@ -42,10 +28,7 @@ export default function OurSpaceSection() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{
-                duration: 0.7,
-                delay: i * 0.1,
-              }}
+              transition={{ duration: 0.7, delay: i * 0.1 }}
             >
               <img
                 src={img.src}
