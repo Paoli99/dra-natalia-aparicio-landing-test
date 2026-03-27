@@ -1,5 +1,5 @@
+import placeholder from "@/assets/images/placeholder-5.png";
 import { motion } from "motion/react";
-import placeholder from "../../../public/placeholder-5.png";
 
 const images = [
   {
