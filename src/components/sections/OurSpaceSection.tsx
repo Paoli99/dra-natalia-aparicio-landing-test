@@ -31,7 +31,7 @@ export default function OurSpaceSection() {
               transition={{ duration: 0.7, delay: i * 0.1 }}
             >
               <img
-                src={img.src}
+                src={images.src}
                 alt="Espacio"
                 className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0"
               />
