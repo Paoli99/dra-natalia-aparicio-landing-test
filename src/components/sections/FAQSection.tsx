@@ -73,7 +73,7 @@ export default function FAQSection() {
                 {/* Content */}
                 <AnimatePresence initial={false}>
                   {isOpen && (
-                    <CollapsibleContent asChild>
+                    <CollapsibleContent>
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
