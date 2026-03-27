@@ -1,20 +1,21 @@
+import placeholder from "@/assets/images/placeholder-5.png";
 import { motion } from "motion/react";
 
 const images = [
   {
-    src: "/images/placeholder-5.png",
+    src: placeholder,
     span: "md:col-span-8",
   },
   {
-   src: "/images/placeholder-5.png",
+   src: placeholder,
     span: "md:col-span-4",
   },
   {
-    src: "/images/placeholder-5.png",
+    src: placeholder,
     span: "md:col-span-4",
   },
   {
-    src: "/images/placeholder-5.png",
+    src: placeholder,
     span: "md:col-span-8",
   },
 ];
