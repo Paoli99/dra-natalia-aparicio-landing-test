@@ -2,19 +2,19 @@ import { motion } from "motion/react";
 
 const images = [
   {
-    src: "/src/assets/images/placeholder-5.png",
+    src: "/images/placeholder-5.png",
     span: "md:col-span-8",
   },
   {
-    src: "/src/assets/images/placeholder-5.png",
+   src: "/images/placeholder-5.png",
     span: "md:col-span-4",
   },
   {
-    src: "/src/assets/images/placeholder-5.png",
+    src: "/images/placeholder-5.png",
     span: "md:col-span-4",
   },
   {
-    src: "/src/assets/images/placeholder-5.png",
+    src: "/images/placeholder-5.png",
     span: "md:col-span-8",
   },
 ];
