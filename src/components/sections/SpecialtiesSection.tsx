@@ -357,7 +357,7 @@ const restSections = sections.slice(2);
                                 duration: 0.28,
                                 ease: [0.4, 0, 0.2, 1],
                               }}
-                              className="px-6 py-6 space-y-6 bg-[#fdfbf7] min-h-[65vh] max-h-[65vh]"
+                              className="px-6 py-6 space-y-6 bg-[#fdfbf7] min-h-[75vh] max-h-[75vh]"
                             >
                               <div className="flex items-start justify-between gap-3 ">
                                 <h4 className="text-2xl font-extrabold tracking-tight leading-[0.95] text-zinc-900">
