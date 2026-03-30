@@ -291,7 +291,13 @@ const restSections = sections.slice(2);
 
                        <div className="flex justify-center pt-2">
                         <Button className="px-10 py-6 rounded-full bg-[#c1a05f] text-white hover:bg-[#a8874a]">
-                          Agenda tu cita
+                          <a
+                            href="https://agenda.saluta360.com/6565114f-1b71-4e1c-9833-b51b042d30bb"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Agenda tu cita
+                          </a>
                         </Button>
                       </div>
                     </div>
@@ -467,7 +473,13 @@ const restSections = sections.slice(2);
                             </div>
 
                             <Button className="w-full py-4 rounded-full bg-[#c1a05f] text-white hover:bg-[#a8874a]">
+                              <a
+                              href="https://agenda.saluta360.com/6565114f-1b71-4e1c-9833-b51b042d30bb"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               Agenda tu cita
+                            </a>
                             </Button>
                           </div>
                         </motion.div>
