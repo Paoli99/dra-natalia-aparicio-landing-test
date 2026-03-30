@@ -1,7 +1,7 @@
 import portada from "@/assets/images/portada.png";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import SplitText from "../ui/SplitText";
 
 export default function HeroSection() {
@@ -15,14 +15,6 @@ export default function HeroSection() {
       ease: "power1.inOut",
       duration: 1,
     });
-  }, []);
-
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.rel = "preload";
-    link.as = "image";
-    link.href = portada;
-    document.head.appendChild(link);
   }, []);
 
   return (
