@@ -35,7 +35,7 @@ export default function HeroSection() {
 
         <h1 className="font-serif text-4xl md:text-6xl leading-[1.1] uppercase tracking-[-0.02em] mb-12 flex flex-wrap gap-x-2">
 
-          <SplitText text="La" tag="span" />
+          
 
           <SplitText
             text="Resultados naturales"
