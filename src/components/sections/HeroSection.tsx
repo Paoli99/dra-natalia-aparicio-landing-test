@@ -38,13 +38,13 @@ export default function HeroSection() {
           <SplitText text="La" tag="span" />
 
           <SplitText
-            text="medicina estética"
+            text="Resultados naturales"
             tag="span"
             className="text-[#c1a05f] uppercase"
           />
 
           <SplitText
-            text="es una rama de la medicina"
+            text="que realzan tu belleza"
             tag="span"
           />
 
