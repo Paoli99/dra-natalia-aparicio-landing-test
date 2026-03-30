@@ -20,18 +20,17 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center bg-black text-white overflow-hidden">
 
-      {/* BG IMAGE */}
       <div className="absolute inset-0 z-0">
-        <img
+       <img
           src={portada}
+          loading="eager"
+          fetchPriority="high"
           className="w-full h-full object-cover object-[70%_center] md:object-right"
         />
       </div>
 
-      {/* OVERLAY */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-transparent z-[1]" />
 
-      {/* CONTENT */}
       <div className="relative z-10 w-full px-6 md:px-16 max-w-5xl">
 
         <h1 className="font-serif text-4xl md:text-6xl leading-[1.1] uppercase tracking-[-0.02em] mb-12 flex flex-wrap gap-x-2">
