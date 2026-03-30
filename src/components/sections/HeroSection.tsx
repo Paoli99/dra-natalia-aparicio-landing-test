@@ -1,8 +1,10 @@
 import portada from "@/assets/images/portada.png";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { useRef } from "react";
 import SplitText from "../ui/SplitText";
+gsap.registerPlugin(ScrollToPlugin);
 
 export default function HeroSection() {
   const ctaRef = useRef(null);
@@ -52,8 +54,19 @@ export default function HeroSection() {
 
         <a
           ref={ctaRef}
-          href="#especialidades"
-          className="inline-flex items-center gap-3 text-white hover:text-[#c1a05f] transition-colors duration-100"
+          onClick={(e) => {
+            e.preventDefault();
+
+            gsap.to(window, {
+              scrollTo: {
+                y: "#especialidades",
+                offsetY: 120,
+              },
+              duration: 1.4,
+              ease: "power4.inOut",
+            });
+          }}
+          className="inline-flex items-center gap-3 text-white hover:text-[#c1a05f] transition-colors duration-100 cursor-pointer"
         >
           <span className="text-[10px] font-bold uppercase tracking-[0.4em]">
             Descubrir tratamientos

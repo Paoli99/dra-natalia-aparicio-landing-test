@@ -1,5 +1,9 @@
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { Facebook, Instagram } from "lucide-react";
 import { TikTokIcon } from "../ui/icons/TiktokIcon";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 const navItems = [
   { name: "Dirección", link: "#address" },
@@ -23,6 +27,20 @@ const SOCIALS = [
 ];
 
 export default function Footer() {
+  const handleScroll = (target: string) => {
+    const el = document.querySelector(target);
+    if (!el) return;
+
+    const y =
+      el.getBoundingClientRect().top + window.scrollY - window.innerHeight * 0.25;
+
+    gsap.to(window, {
+      scrollTo: { y },
+      duration: 1.8,
+      ease: "expo.inOut",
+    });
+  };
+
   return (
     <footer className="w-full border-t border-zinc-100 bg-zinc-50 px-12 py-20">
       <div className="mx-auto flex max-w-[1920px] flex-col gap-12 md:flex-row md:items-start md:justify-between">
@@ -66,8 +84,11 @@ export default function Footer() {
             {navItems.map((item, i) => (
               <a
                 key={i}
-                href={item.link}
-                className="text-sm text-zinc-600 transition-colors hover:text-[#c1a05f]"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleScroll(item.link);
+                }}
+                className="cursor-pointer text-sm text-zinc-600 transition-colors hover:text-[#c1a05f]"
               >
                 {item.name}
               </a>

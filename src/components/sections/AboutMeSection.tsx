@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 export default function AboutSection() {
   return (
-    <section className="py-32 bg-white">
+    <section id="aboutme" className="py-32 bg-white">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-start">
 

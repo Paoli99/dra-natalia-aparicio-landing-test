@@ -4,6 +4,8 @@ import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import treatmentsData from "../../../treatments.json";
 
+
+
 type TreatmentItem = {
   title: string;
   description: string;
@@ -102,7 +104,7 @@ const restSections = sections.slice(2);
                 transition={{ duration: 0.48, ease: [0.4, 0, 0.2, 1] }}
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
+                viewport={{ once: false, margin: "-80px" }}
               >
                 <div
                   onClick={() => !isSelected && selectCard(item)}
@@ -285,6 +287,12 @@ const restSections = sections.slice(2);
                             Siguiente →
                           </button>
                       </div>
+                      </div>
+
+                       <div className="flex justify-center pt-2">
+                        <Button className="px-10 py-6 rounded-full bg-[#c1a05f] text-white hover:bg-[#a8874a]">
+                          Agenda tu cita
+                        </Button>
                       </div>
                     </div>
                   </CardContent>

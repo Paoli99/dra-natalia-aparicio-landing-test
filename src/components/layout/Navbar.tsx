@@ -6,9 +6,12 @@ import {
   Navbar,
   NavbarButton,
   NavBody,
-  NavItems,
 } from "@/components/ui/resizable-navbar";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { useState } from "react";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 const navItems = [
   { name: "Dirección", link: "#address" },
@@ -17,10 +20,7 @@ const navItems = [
 ];
 
 const Logo = () => (
- <a
-    href="#"
-    className="relative z-20 mr-4 flex items-center no-underline"
-  >
+  <a href="#" className="relative z-20 mr-4 flex items-center no-underline">
     <img
       src="/horizontal_logo.png"
       alt="Dra. Natalia Andrade Requena"
@@ -32,20 +32,46 @@ const Logo = () => (
 export function NavbarDemo() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const handleScroll = (target: string) => {
+    const el = document.querySelector(target);
+    if (!el) return;
+
+    const y =
+      el.getBoundingClientRect().top + window.scrollY - window.innerHeight * 0.25;
+
+    gsap.to(window, {
+      scrollTo: { y },
+      duration: 1.8,
+      ease: "expo.inOut",
+    });
+  };
+
   return (
     <div className="relative w-full">
       <Navbar>
         <NavBody>
           <Logo />
-          <NavItems
-            items={navItems}
-            className="[&_a]:text-[11px] [&_a]:font-bold [&_a]:uppercase [&_a]:tracking-[0.3em] [&_a]:text-zinc-500 [&_a:hover]:text-[#c1a05f]"
-          />
+
+          <div className="flex gap-6">
+            {navItems.map((item, idx) => (
+              <a
+                key={idx}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleScroll(item.link);
+                }}
+                className="cursor-pointer text-[11px] font-bold uppercase tracking-[0.3em] text-zinc-500 hover:text-[#c1a05f]"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+
           <div className="flex items-center">
             <NavbarButton
               href="https://agenda.saluta360.com/6565114f-1b71-4e1c-9833-b51b042d30bb"
               variant="primary"
-              className="rounded-full bg-[#c1a05f] px-7 py-3 text-[11px] font-bold uppercase tracking-widest text-white shadow-lg hover:opacity-90 hover:translate-y-0"
+              className="rounded-full bg-[#c1a05f] px-7 py-3 text-[11px] font-bold uppercase tracking-widest text-white shadow-lg hover:opacity-90"
             >
               Agenda tu cita
             </NavbarButton>
@@ -61,23 +87,26 @@ export function NavbarDemo() {
             />
           </MobileNavHeader>
 
-          <MobileNavMenu
-            isOpen={isMobileMenuOpen}
-            //onClose={() => setIsMobileMenuOpen(false)}
-          >
-            {navItems.map((item, idx) => (
-              <a
-                key={`mobile-link-${idx}`}
-                href={item.link}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-[11px] font-bold uppercase tracking-[0.3em] text-zinc-700 hover:text-[#c1a05f] transition-colors no-underline"
-              >
-                {item.name}
-              </a>
-            ))}
-            <div className="flex w-full flex-col pt-2">
+          <MobileNavMenu isOpen={isMobileMenuOpen}>
+            <div className="flex flex-col gap-4">
+              {navItems.map((item, idx) => (
+                <a
+                  key={idx}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMobileMenuOpen(false);
+                    handleScroll(item.link);
+                  }}
+                  className="cursor-pointer text-[11px] font-bold uppercase tracking-[0.3em] text-zinc-700 hover:text-[#c1a05f]"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+
+            <div className="flex w-full flex-col pt-4">
               <NavbarButton
-              href="https://agenda.saluta360.com/6565114f-1b71-4e1c-9833-b51b042d30bb"
+                href="https://agenda.saluta360.com/6565114f-1b71-4e1c-9833-b51b042d30bb"
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full rounded-full bg-[#c1a05f] py-3 text-center text-[11px] font-bold uppercase tracking-widest text-white"
