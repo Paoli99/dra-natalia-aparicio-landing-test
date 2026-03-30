@@ -310,23 +310,23 @@ const restSections = sections.slice(2);
                   delay: index * 0.08,
                 }}
               >
-                <Card className="overflow-hidden rounded-2xl border border-zinc-100 shadow-sm">
-                  <CardContent className="p-0">
+                <Card className="overflow-hidden rounded-2xl border border-zinc-200 shadow-sm ">
+                  <CardContent className="p-0 ">
                     <div
-                      className="group relative aspect-[4/3] cursor-pointer overflow-hidden"
+                      className="group relative aspect-[4/3] cursor-pointer overflow-hidden "
                       onClick={() => selectCard(item)}
                     >
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="h-full w-full object-cover transition-all duration-700"
+                        className="h-full w-full object-cover transition-all duration-700 md:grayscale group-hover:scale-110 group-hover:grayscale-0"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
-                      <div className="absolute bottom-5 left-5 right-10">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-80" />
+                      <div className="absolute bottom-6 left-6 right-6">
                         <p className="mb-1 text-[10px] uppercase tracking-widest text-white/60">
                           {item.number}
                         </p>
-                        <h3 className="text-xl font-extrabold uppercase tracking-tight text-white">
+                        <h3 className="text-2xl font-extrabold uppercase tracking-tight text-white">
                           {item.title}
                         </h3>
                       </div>
@@ -357,39 +357,73 @@ const restSections = sections.slice(2);
                                 duration: 0.28,
                                 ease: [0.4, 0, 0.2, 1],
                               }}
-                              className="px-5 pt-6 pb-2 space-y-6"
+                              className="px-6 py-6 space-y-6 bg-[#fdfbf7] min-h-[65vh] max-h-[65vh]"
                             >
-                              <div className="flex items-start justify-between gap-2">
-                                <h4 className="text-xl font-bold text-zinc-900">
-                                  {currentItem.title}
+                              <div className="flex items-start justify-between gap-3 ">
+                                <h4 className="text-2xl font-extrabold tracking-tight leading-[0.95] text-zinc-900">
+                                  {currentItem.title.split(" ")[0]}{" "}
+                                  <span className="italic font-normal text-[#c1a05f] lowercase">
+                                    {currentItem.title.split(" ").slice(1).join(" ")}
+                                  </span>
                                 </h4>
-                                <span className="text-xs text-zinc-400">
+
+                                <span className="shrink-0 text-xs text-zinc-400 mt-1">
                                   {currentIndex + 1} / {item.items.length}
                                 </span>
                               </div>
 
-                              <p className="text-sm text-zinc-600">
+                              <p className="text-sm text-zinc-600 leading-relaxed">
                                 {currentItem.description}
                               </p>
 
-                              {(currentItem.sections ?? []).length > 0 &&
-                                (currentItem.sections ?? []).map((section) => (
-                                  <div key={section.title} className="space-y-1">
-                                    <p className="text-[10px] font-bold uppercase tracking-widest text-[#c1a05f]">
-                                      {section.title}
-                                    </p>
-                                    <ul className="space-y-0.5 text-sm text-zinc-500">
-                                      {section.items.map((si) => (
-                                        <li key={si}>• {si}</li>
-                                      ))}
-                                    </ul>
+                              {(currentItem.sections ?? []).length > 0 && (
+                                <>
+                                  <div className="grid grid-cols-1 gap-6">
+                                    {(currentItem.sections ?? []).slice(0, 2).map((section) => (
+                                      <div key={section.title} className="space-y-3">
+                                        <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-900 border-b pb-2">
+                                          {section.title}
+                                        </p>
+                                        <ul className="space-y-2 text-sm text-zinc-600">
+                                          {section.items.map((si) => (
+                                            <li key={si} className="flex items-center gap-2">
+                                              <span className="h-2 w-2 rounded-full bg-[#c1a05f]" />
+                                              {si}
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      </div>
+                                    ))}
                                   </div>
-                                ))}
+
+                                  {(currentItem.sections ?? []).length > 2 && (
+                                    <div className="space-y-6">
+                                      {(currentItem.sections ?? [])
+                                        .slice(2)
+                                        .map((section) => (
+                                          <div key={section.title} className="space-y-3">
+                                            <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-900 border-b pb-2">
+                                              {section.title}
+                                            </p>
+                                            <ul className="space-y-2 text-sm text-zinc-600">
+                                              {section.items.map((si) => (
+                                                <li key={si} className="flex items-center gap-2">
+                                                  <span className="text-[#c1a05f]">✦</span>
+                                                  {si}
+                                                </li>
+                                              ))}
+                                            </ul>
+                                          </div>
+                                        ))}
+                                    </div>
+                                  )}
+                                </>
+                              )}
                             </motion.div>
                           </AnimatePresence>
 
-                          <div className="px-5 pb-5 pt-2 space-y-3">
-                          <div className="relative flex items-center">
+                          <div className="px-6 pb-5 pt-3 space-y-3 border-t border-zinc-100">
+                            <div className="relative flex items-center">
                               {currentIndex > 0 && (
                                 <button
                                   onClick={() => changePage(-1)}
@@ -400,28 +434,28 @@ const restSections = sections.slice(2);
                               )}
 
                               <div className="absolute left-1/2 -translate-x-1/2 flex gap-1.5 items-center">
-                              {item.items.map((_, i) => (
-                                <button
-                                  key={i}
-                                  onClick={() => goToPage(i)}
-                                  className="h-1.5 rounded-full transition-all duration-300"
-                                  style={{
-                                    width: i === currentIndex ? 18 : 6,
-                                    background:
-                                      i === currentIndex ? "#c1a05f" : "#d4d4d8",
-                                  }}
-                                />
-                              ))}
-                            </div>
+                                {item.items.map((_, i) => (
+                                  <button
+                                    key={i}
+                                    onClick={() => goToPage(i)}
+                                    className="h-1.5 rounded-full transition-all duration-300"
+                                    style={{
+                                      width: i === currentIndex ? 18 : 6,
+                                      background:
+                                        i === currentIndex ? "#c1a05f" : "#d4d4d8",
+                                    }}
+                                  />
+                                ))}
+                              </div>
 
-                             <div className="ml-auto">
-                              <button
-                                onClick={() => changePage(1)}
-                                className="rounded-lg border border-zinc-200 px-3 py-1.5 text-xs text-zinc-500"
-                              >
-                                Siguiente →
-                              </button>
-                            </div>
+                              <div className="ml-auto">
+                                <button
+                                  onClick={() => changePage(1)}
+                                  className="rounded-lg border border-zinc-200 px-3 py-1.5 text-xs text-zinc-500"
+                                >
+                                  Siguiente →
+                                </button>
+                              </div>
                             </div>
 
                             <Button className="w-full py-4 rounded-full bg-[#c1a05f] text-white hover:bg-[#a8874a]">

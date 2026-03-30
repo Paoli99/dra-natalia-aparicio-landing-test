@@ -47,7 +47,7 @@ export function NavbarDemo() {
               variant="primary"
               className="rounded-full bg-[#c1a05f] px-7 py-3 text-[11px] font-bold uppercase tracking-widest text-white shadow-lg hover:opacity-90 hover:translate-y-0"
             >
-              Agendar Cita
+              Agenda tu cita
             </NavbarButton>
           </div>
         </NavBody>
@@ -82,7 +82,7 @@ export function NavbarDemo() {
                 variant="primary"
                 className="w-full rounded-full bg-[#c1a05f] py-3 text-center text-[11px] font-bold uppercase tracking-widest text-white"
               >
-                Agendar Cita
+                Agenda tu cita
               </NavbarButton>
             </div>
           </MobileNavMenu>

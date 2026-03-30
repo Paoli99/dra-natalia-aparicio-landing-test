@@ -36,7 +36,7 @@ export default function CtaSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.25 }}
         >
-          Solicitar Consulta Privada
+          Agenda tu cita
         </motion.a>
       </div>
 
