@@ -20,13 +20,25 @@ const navItems = [
 ];
 
 const Logo = () => (
-  <a href="#" className="relative z-20 mr-4 flex items-center no-underline">
-    <img
-      src="/horizontal_logo.png"
-      alt="Dra. Natalia Andrade Requena"
-      className="h-20 w-auto object-contain"
-    />
-  </a>
+ <a
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
+
+    gsap.to(window, {
+      scrollTo: { y: 0 },
+      duration: 1.8,
+      ease: "expo.inOut",
+    });
+  }}
+  className="relative z-20 mr-4 flex items-center no-underline cursor-pointer"
+>
+  <img
+    src="/horizontal_logo.png"
+    alt="Dra. Natalia Andrade Requena"
+    className="h-20 w-auto object-contain"
+  />
+</a>
 );
 
 export function NavbarDemo() {
