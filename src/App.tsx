@@ -9,23 +9,26 @@ import FAQSection from "./components/sections/FAQSection";
 import FollowUsSection from "./components/sections/FollowUsSection";
 import OurSpaceSection from "./components/sections/OurSpaceSection";
 import SpecialtiesSection from "./components/sections/SpecialtiesSection";
+import StickyCTA from "./components/ui/stickyCTA";
 
 function App() {
-  return (
-    <main className="min-h-screen bg-white">
-      <NavbarDemo />
-      <HeroSection />
-      <AboutSection />
-      <SpecialtiesSection />
-      <OurSpaceSection />
-      <ExclusiveProductsSection />
-      <FollowUsSection />
-      <ContactSection />
-      <FAQSection />
-      <CtaSection />
-      <Footer />
-    </main>
-  );
+	return (
+		<main className="min-h-screen bg-white">
+			<NavbarDemo />
+			<HeroSection />
+			<AboutSection />
+			<SpecialtiesSection />
+			<OurSpaceSection />
+			<ExclusiveProductsSection />
+			<FollowUsSection />
+			<ContactSection />
+			<FAQSection />
+			<CtaSection />
+
+			<StickyCTA />
+			<Footer />
+		</main>
+	);
 }
 
 export default App;
