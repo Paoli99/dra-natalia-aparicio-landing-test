@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 export default function StickyCTA() {
 	return (
 		<motion.div
-			className="fixed bottom-[20vh] md:bottom-[10vh] right-16 md:right-12 z-[999]"
+			className="fixed bottom-[12vh] md:bottom-[10vh] right-16 md:right-12 z-[999]"
 			animate={{ y: [0, -8, 0] }}
 			transition={{
 				duration: 1.6,
