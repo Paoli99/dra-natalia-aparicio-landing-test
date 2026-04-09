@@ -13,7 +13,7 @@ export default function StickyCTA() {
 			}}
 		>
 			<Button className="rounded-full px-6 py-4 text-xs font-bold uppercase tracking-widest shadow-lg">
-				<a href="https://wa.me/1234567890" target="_blank" rel="noreferrer">
+				<a href="https://agenda.saluta360.com/6565114f-1b71-4e1c-9833-b51b042d30bb" target="_blank" rel="noreferrer">
 					AGENDA TU CITA
 				</a>
 			</Button>
